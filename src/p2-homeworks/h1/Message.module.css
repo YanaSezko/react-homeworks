@@ -1,0 +1,46 @@
+.message {
+    color: azure;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    padding: 10px;
+    background: darkgoldenrod;
+    min-height: 50px;
+    width: 250px;
+    position: relative;
+    border-radius: 3px;
+}
+
+.message::before {
+    content: '';
+    position: absolute;
+    background: darkgoldenrod;
+    bottom: 5px;
+    left: -7px;
+    height: 15px;
+    width: 15px;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+.wrapper {
+    display: flex;
+    background: yellowgreen;
+    align-items: flex-end;
+    padding: 20px;
+
+}
+.wrapper img {
+    border: solid 1px azure;
+    border-radius: 50%;
+    padding: 3px;
+    margin: 10px 5px;
+}
+
+.time {
+    opacity: 0.4;
+}
+
+h4 {
+    opacity: 0.5;
+}
