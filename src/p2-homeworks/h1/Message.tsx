@@ -4,7 +4,6 @@ import {messageDataType} from "./HW1";
 
 
 function Message(props: messageDataType) {
-    debugger
     return (
         <div className={s.wrapper}>
             <p><img width={72} height={72} src={props.avatar} alt="avatar"/></p>

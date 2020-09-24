@@ -7,7 +7,6 @@ export type messageDataType = {
     name: string
     message:string
     time:string
-
 }
 
 const messageData = {

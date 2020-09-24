@@ -1,3 +1,23 @@
 .someClass {
+    margin: 10px;
+    padding: 20px;
+    background-color: #ffefb0;
 
+}
+
+.someClass button {
+    margin: 10px;
+    padding: 5px 10px;
+    background-color: #3a6d36;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.item button {
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #ab3d1f;
+    border: none;
+    color: #fff;
 }

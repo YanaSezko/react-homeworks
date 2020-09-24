@@ -2,47 +2,54 @@ import React, {useState} from "react";
 import Affairs from "./Affairs";
 
 // types
-export type AffairPriorityType = any; // need to fix any
-export type AffairType = any; // need to fix any
-export type FilterType = "all" | AffairPriorityType;
-
-// constants
-const defaultAffairs: any = [ // need to fix any
-    {_id: 1, name: "React", priority: "high"},
-    {_id: 2, name: "anime", priority: "low"},
-    {_id: 3, name: "games", priority: "low"},
-    {_id: 4, name: "work", priority: "high"},
-    {_id: 5, name: "html & css", priority: "middle"},
-];
-
-// pure helper functions
-export const filterAffairs = (affairs: any, filter: any): any => { // need to fix any
-    if (filter === "all") return affairs;
-    else return; // need to fix
-}
-export const deleteAffair = (affairs: any, _id: any): any => { // need to fix any
-    return; // need to fix
-}
+export type AffairType = {
+    _id: number
+    name: string
+    priority: string
+};
+export type FilterType = "all" | "low" | "middle" | "high";
 
 function HW2() {
-    const [affairs, setAffairs] = useState<any>(defaultAffairs); // need to fix any
-    const [filter, setFilter] = useState<FilterType>("all");
+    let [defaultAffairs, setAffair] = useState<Array<AffairType>>([ // need to fix any
+        {_id: 1, name: " Обучение в it-инкубаторе ", priority: "high"},
+        {_id: 2, name: " Хобби(творчество) ", priority: "low"},
+        {_id: 3, name: " Чтение книг ", priority: "low"},
+        {_id: 4, name: " Семейные обязанности ", priority: "high"},
+        {_id: 5, name: " Занятие спортом ", priority: "middle"},
+    ]);
 
-    const filteredAffairs = filterAffairs(affairs, filter);
-    const deleteAffairCallback = (_id: any) => setAffairs(deleteAffair(affairs, _id)); // need to fix any
+    let [filter, setFilter] = useState<FilterType>("all");
+
+    const deleteAffair = (_id: number) => { // need to fix any
+        let filteredAffairs = defaultAffairs.filter((affair: AffairType) => affair._id !== _id)// need to fix
+        setAffair(filteredAffairs);
+    }
+
+    function filterAffairs(value: FilterType) {
+        setFilter(value);
+    }
+
+    let filteredAffairs = defaultAffairs;
+    if (filter === "high") {
+        filteredAffairs = defaultAffairs.filter(a => a.priority === "high")
+    }
+    if (filter === "middle") {
+        filteredAffairs = defaultAffairs.filter(a => a.priority === "middle")
+    }
+    if (filter === "low") {
+        filteredAffairs = defaultAffairs.filter(a => a.priority === "low")
+    }
 
     return (
         <div>
             <hr/>
             homeworks 2
-
             {/*should work (должно работать)*/}
             <Affairs
                 data={filteredAffairs}
-                setFilter={setFilter}
-                deleteAffairCallback={deleteAffairCallback}
+                filterAffairs={filterAffairs}
+                deleteAffair={deleteAffair}
             />
-
             <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeAffairs/>*/}
