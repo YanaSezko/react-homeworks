@@ -1,7 +1,38 @@
 .someClass {
-
+    background-color: #092b67;
+    color: white;
+    text-align: center;
+    position: relative;
 }
 
 .error {
     border: 1px solid red;
+}
+
+p {
+    color: red;
+}
+
+span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    font-size: 64px;
+    font-weight: lighter;
+    font-style: oblique;
+}
+
+input {
+    padding: 10px 10px;
+}
+
+button {
+    border: none;
+    padding: 10px;
+    margin: 10px;
+}
+
+ul li {
+    list-style: none;
 }

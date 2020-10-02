@@ -57,5 +57,12 @@ function HW2() {
         </div>
     );
 }
+export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): any => { // need to fix any
+    if (filter === "all") return affairs;
+    else return; // need to fix
+}
+export const deleteAffair = (affairs: Array<AffairType>, _id: number): any => { // need to fix any
+    return; // need to fix
+}
 
 export default HW2;
