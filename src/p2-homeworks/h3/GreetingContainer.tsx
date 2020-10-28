@@ -1,11 +1,12 @@
 import React, {ChangeEvent, useState} from "react";
 import Greeting from "./Greeting";
 import {UserType} from "./HW3";
+import {v1} from "uuid";
 
 
 type GreetingContainerPropsType = {
-    users: UserType[] // need to fix any
-    addUserCallback: (value: any) => void  // need to fix any
+    users: Array<UserType> // need to fix any
+    addUserCallback: (name:string) => void// need to fix any
 }
 
 // более простой и понятный для новичков
@@ -24,22 +25,19 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
         setName(e.currentTarget.value)
         setError(null)
     };
-
     const addUser = () => {
         if (name.trim() !== "") {
-            addUserCallback(name.trim())
+            addUserCallback(name)
             setName("")
         } else setError("Поле не должно быть пустым!ОШИБКА!")
-
-        // need to fix
+    // need to fix
     };
     const totalUsers = users.length; // need to fix
-
     return (
         <Greeting
             name={name}
             setNameCallback={setNameCallback}
-            addUser={addUser}
+            addUser={ addUser}
             error={error}
             totalUsers={totalUsers}
         />

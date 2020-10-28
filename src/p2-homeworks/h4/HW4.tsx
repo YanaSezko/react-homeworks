@@ -29,8 +29,8 @@ function HW4() {
                     value={text}
                     onChangeText={setText}
                     onEnter={showAlert}
-                    error={error}
-                    // className={s.blue} // проверьте, рабоет ли смешивание классов
+                    //error={error}
+                    //className={s.blue} // проверьте, рабоет ли смешивание классов
                 />
 
                 {/*should work (должно работать)*/}
