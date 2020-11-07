@@ -4,6 +4,7 @@ import {messageDataType} from "./HW1";
 
 
 function AlternativeMessage(props: messageDataType) {
+    const boy=require('./images/boy.png')
     return (
         <div className={s.wrapper}>
             <div className={s.message}>
@@ -13,7 +14,7 @@ function AlternativeMessage(props: messageDataType) {
                 </div>
                 <p className={s.time}>{props.time}</p>
             </div>
-            <div><img width={72} height={72} src={props.avatar} alt="avatar"/></div>
+            <div><img width={72} height={72} src={boy} alt="avatar"/></div>
         </div>
     );
 }

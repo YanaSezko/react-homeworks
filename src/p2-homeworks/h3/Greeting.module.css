@@ -1,5 +1,5 @@
 .someClass {
-    background-color: #092b67;
+    background-color: #52432c;
     color: white;
     text-align: center;
     position: relative;
@@ -8,8 +8,8 @@
 .error {
     border: 1px solid red;
 }
-
-p {
+.someClass p{
+    font-size: 24px;
     color: red;
 }
 

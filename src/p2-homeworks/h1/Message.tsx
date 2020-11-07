@@ -3,10 +3,13 @@ import s from "./Message.module.css"
 import {messageDataType} from "./HW1";
 
 
+
+
 function Message(props: messageDataType) {
+    const girl=require('./images/girl.png')
     return (
         <div className={s.wrapper}>
-            <p><img width={72} height={72} src={props.avatar} alt="avatar"/></p>
+            <p><img width={72} height={72} src={girl} alt="avatar"/></p>
             <div className={s.message}>
                 <div>
                     <h4>{props.name}</h4>
