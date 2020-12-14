@@ -1,7 +1,7 @@
 .default {
     border-radius: 5px;
     padding: 10px 15px;
-    margin: 5px;
+    margin: 15px;
     border: 1px solid #CCCCCC;
     color: #ffffff;
     background: #4e6354;
@@ -15,7 +15,7 @@
     border-radius: 5px;
     outline: none;
     padding: 10px 15px;
-    margin: 5px;
+    margin: 15px;
     border: 1px solid #CCCCCC;
     background: rgb(206, 47, 47);
     color: #ffffff;

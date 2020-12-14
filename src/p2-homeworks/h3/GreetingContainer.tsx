@@ -1,8 +1,6 @@
 import React, {ChangeEvent, useState} from "react";
 import Greeting from "./Greeting";
 import {UserType} from "./HW3";
-import {v1} from "uuid";
-
 
 type GreetingContainerPropsType = {
     users: Array<UserType> // need to fix any
