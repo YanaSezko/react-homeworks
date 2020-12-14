@@ -1,7 +1,9 @@
 .checkbox {
-
+    position: absolute;
 }
 
 .spanClassName {
-
+    position: relative;
+    font-size: 14px;
+    top: -5px
 }

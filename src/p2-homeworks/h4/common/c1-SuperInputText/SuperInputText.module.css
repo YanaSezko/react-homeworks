@@ -1,12 +1,36 @@
 .superInput {
+    padding: 10px;
+    margin: 10px;
+    font-size: 14px;
+    background: inherit;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+
+
+
+    -webkit-box-shadow: inset 0 0 9px 0 rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0 0 9px 0 rgba(255, 255, 255, 0.5);
 
 }
 
 .errorInput {
-    border: 3px solid lime;
-    background: red;
+    padding: 10px;
+    margin: 10px;
+    font-size: 14px;
+    background: rgb(206, 47, 47);
+    border: none;
+    outline: none;
+    color: #000000;
+    -webkit-box-shadow: inset 0 0 9px 0 rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0 0 9px 0 rgba(255, 255, 255, 0.5);
 }
 
-.error {
-    color: red;
+.spanClassName {
+    color: rgb(206, 47, 47);
+    position: relative;
+    font-size: 21px;
+    font-weight: 400;
+    text-shadow: 0 0 10px #ffffff5d;
 }

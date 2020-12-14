@@ -5,13 +5,6 @@
     position: relative;
 }
 
-.error {
-    border: 1px solid red;
-}
-.someClass p{
-    font-size: 24px;
-    color: red;
-}
 
 span {
     position: absolute;
