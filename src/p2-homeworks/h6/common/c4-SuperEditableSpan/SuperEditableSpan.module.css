@@ -1,0 +1,10 @@
+.spanClassName {
+    position: relative;
+    font-size: 38px;
+    color: white;
+}
+
+.spanClassName::after {
+    content: '\270D';
+    opacity: 0.6;
+}

@@ -1,7 +1,8 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import SuperEditableSpan from "./common/c4-SuperEditableSpan/SuperEditableSpan";
 import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
-import {restoreState, saveState} from "./localStorage/localStorage";
+import { restoreState, saveState } from "./localStorage/localStorage";
+import s from "./HW6.module.css"
 
 function HW6() {
     const [value, setValue] = useState<string>("");
@@ -10,12 +11,14 @@ function HW6() {
         saveState<string>("editable-span-value", value);
     };
     const restore = () => {
-        // setValue();
+        // setValue();     
+        const value: string = restoreState<string>("editable-span-value", "")
+        setValue(value)
     };
 
     return (
-        <div>
-            <hr/>
+        <div className={s.hw}>
+            <hr />
             homeworks 6
 
             {/*should work (должно работать)*/}
@@ -23,16 +26,16 @@ function HW6() {
                 <SuperEditableSpan
                     value={value}
                     onChangeText={setValue}
-                    spanProps={{children: value ? undefined : "enter text..."}}
+                    spanProps={{ children: value ? undefined : " tap here twice " }}
                 />
             </div>
             <SuperButton onClick={save}>save</SuperButton>
-            <SuperButton onClick={restore}>restore</SuperButton>
+            <SuperButton red onClick={restore}>restore</SuperButton>
 
-            <hr/>
+            <hr />
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeSuperEditableSpan/>*/}
-            <hr/>
+            <hr />
         </div>
     );
 }
